@@ -1,4 +1,4 @@
-# symfony-task
+# Mini symfony. Создаем проект на symfony с минимальным набором зависимостей
 
 ## Цели
 
@@ -69,3 +69,19 @@ php -S 0.0.0.0:8000 path/to/router.php
 
  1. Файлов 4 - добавляется файл консоли 
  2. Запуск веб-сервера должен произойти с помощи команды `php path_console/to/console.php 0.0.0.0:8000 --webroot=path/to/ --router=path/to/router.php`
+
+## Материалы
+
+* [Требования для запуска Symfony](http://symfony.com/doc/current/reference/requirements.html)
+* [Список пакетов symfony](https://packagist.org/packages/symfony/)
+* [Настройка ядра](http://symfony.com/doc/current/reference/configuration/kernel.html)
+* [FrameworkBundle](https://github.com/symfony/framework-bundle)
+
+## Статьи из серии "Создание фреймворка на компонентах Symfony"
+
+Будут полезны для решения заданий
+
+* [Event Dispatcher](https://symfony.com/doc/current/create_framework/event_dispatcher.html#main)
+* [Http Kernel Interface](https://symfony.com/doc/current/create_framework/http_kernel_httpkernelinterface.html#main)
+* [Http Kernel](https://symfony.com/doc/current/create_framework/http_kernel_httpkernel_class.html#main)
+* [Controller resolver](https://symfony.com/doc/current/create_framework/http_kernel_controller_resolver.html#main)
