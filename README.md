@@ -31,7 +31,7 @@
  - `MicroKernelTrait` 
  - Пакет `symfony/symfony` и аналоги
  - Пакет `symfony/symfony-standard` и аналоги
- - Команду `composer install-project`
+ - Команду `composer create-project`
 
 Проект должен состоять из (желательно) трех файлов - ядра, фронт-контроллера (`index.php`|`app.php`|etc) и `composer.json`
 Ядро должно работать в `dev` режиме
@@ -52,7 +52,7 @@ php -S 0.0.0.0:8000 path/to/router.php
 Нельзя использовать (в целях обучения):
  - Пакет `symfony/symfony` и аналоги
  - Пакет `symfony/symfony-standard` и аналоги
- - Команду `composer install-project`
+ - Команду `composer create-project`
 
 Проект должен состоять из (желательно) трех файлов - ядра, фронт-контроллера (`index.php`|`app.php`|etc) и `composer.json`
 Ядро должно работать в `dev` режиме
