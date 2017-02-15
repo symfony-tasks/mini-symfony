@@ -8,16 +8,13 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 
 require_once __DIR__ . '/../vendor/autoload.php';
+require_once __DIR__.'/../app/AppKernel.php';
 
-$kernel = new HttpKernel(new EventDispatcher(), new ControllerResolver());
+$kernel = new AppKernel('dev', true);
 
 $request = Request::createFromGlobals();
 
-try {
-    $response = $kernel->handle($request);
-}catch (NotFoundHttpException $e) {
-    $response = Response::create($e->getMessage(), Response::HTTP_NOT_FOUND);
-}
+$response = $kernel->handle($request);
 
 $response->send();
 
