@@ -12,5 +12,8 @@
     "symfony/framework-bundle": "*",
     "symfony/console": "*",
     "symfony/web-server-bundle": "*"
+  },
+  "autoload": {
+    "psr-4": {"task_3\\": "./"}
   }
 }

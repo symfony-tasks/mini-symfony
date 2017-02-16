@@ -6,9 +6,8 @@ use Symfony\Component\HttpKernel\Controller\ArgumentResolver;
 
 $loader = require __DIR__ . '/vendor/autoload.php';
 Debug::enable();
-require_once('AppKernel.php');
 
-$kernel = new task_1\AppKernel();
+$kernel = new task_1\AppKernel('dev', true);
 $request = Request::createFromGlobals();
 $response = $kernel->handle($request);
 $response->send();
