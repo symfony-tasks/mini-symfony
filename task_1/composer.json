@@ -1,0 +1,19 @@
+{
+  "name": "ruslan89/mini-symfony",
+  "description": "Symfony training",
+  "minimum-stability": "dev",
+  "authors": [
+    {
+      "name": "Ruslan Medvedev",
+      "email": "rusmd89@gmail.com"
+    }
+  ],
+  "require": {
+    "symfony/http-kernel": "^3.0",
+    "symfony/config": "^3.0",
+    "symfony/dependency-injection": "^3.0"
+  },
+  "autoload": {
+    "psr-4": {"task_1\\": "./"}
+  }
+}
