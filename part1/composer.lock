@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "42aa7f39c27e4487a45c6ce96c9ec865",
+    "content-hash": "1c5f597b67fceb2e2147e0b617a20e47",
     "packages": [
         {
             "name": "psr/log",
@@ -111,16 +111,16 @@
         },
         {
             "name": "symfony/debug",
-            "version": "v3.2.3",
+            "version": "v3.2.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/debug.git",
-                "reference": "b4d9818f127c60ce21ed62c395da7df868dc8477"
+                "reference": "9b98854cb45bc59d100b7d4cc4cf9e05f21026b9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/debug/zipball/b4d9818f127c60ce21ed62c395da7df868dc8477",
-                "reference": "b4d9818f127c60ce21ed62c395da7df868dc8477",
+                "url": "https://api.github.com/repos/symfony/debug/zipball/9b98854cb45bc59d100b7d4cc4cf9e05f21026b9",
+                "reference": "9b98854cb45bc59d100b7d4cc4cf9e05f21026b9",
                 "shasum": ""
             },
             "require": {
@@ -164,7 +164,7 @@
             ],
             "description": "Symfony Debug Component",
             "homepage": "https://symfony.com",
-            "time": "2017-01-28T02:37:08+00:00"
+            "time": "2017-02-16T16:34:18+00:00"
         },
         {
             "name": "symfony/dependency-injection",
