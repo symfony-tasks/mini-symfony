@@ -1,0 +1,13 @@
+{
+    "autoload": {
+        "classmap": [
+            "app/AppKernel.php"
+        ]
+    },
+    "require": {
+        "symfony/http-kernel": "^3.2",
+        "symfony/config": "^3.2",
+        "symfony/dependency-injection": "^3.2",
+        "symfony/debug": "^3.2"
+    }
+}
