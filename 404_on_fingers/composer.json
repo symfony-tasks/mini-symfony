@@ -1,0 +1,10 @@
+{
+  "name": "Alexey's Shatunov version for mini-symfony",
+  "description": "Tutorial part 1 - simple 404 error page",
+  "suggest": {
+    "symfony/symfony": "Symfony PHP framework"
+  },
+  "autoload": {
+    "files": ["kernel.php"]
+  }
+}
