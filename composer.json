@@ -1,7 +1,7 @@
 {
   "autoload": {
     "psr-4": {
-      "MiniSymfony\\web\\": "/web"
+      "MiniSymfony3\\web\\": "./web"
     },
     "classmap": [
       "app/AppKernel.php"
@@ -12,7 +12,9 @@
   "require": {
     "symfony/http-foundation": "~3.0",
     "symfony/http-kernel": "~3.0",
-    "symfony/config": "~3.0",
-    "symfony/dependency-injection": "~3.0"
+    "symfony/dependency-injection": "~3.0",
+    "symfony/framework-bundle": "~3.0",
+    "symfony/console": "~3.0",
+    "symfony/process": "~3.0"
   }
 }

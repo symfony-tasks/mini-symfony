@@ -1,29 +1,31 @@
 <?php
 
+use Symfony\Bundle\FrameworkBundle\FrameworkBundle;
+use Symfony\Bundle\FrameworkBundle\Kernel\MicroKernelTrait;
 use Symfony\Component\Config\Loader\LoaderInterface;
-use Symfony\Component\DependencyInjection\Reference;
-use Symfony\Component\EventDispatcher\EventDispatcher;
-use Symfony\Component\HttpKernel\Controller\ControllerResolver;
-use Symfony\Component\HttpKernel\HttpKernel;
+use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\HttpKernel\Kernel;
+use Symfony\Component\Routing\RouteCollectionBuilder;
 
 class AppKernel extends Kernel
 {
-    protected function buildContainer()
-    {
-        $container = parent::buildContainer();
-        $container->register('dispatcher', EventDispatcher::class);
-        $container->register('resolver', ControllerResolver::class);
-        $container->register('http_kernel', HttpKernel::class)->addArgument(new Reference('dispatcher'))->addArgument(new Reference('resolver'));
-        return $container;
-    }
+    use MicroKernelTrait;
 
     public function registerBundles()
     {
-        return [];
+        return [
+            new FrameworkBundle(),
+        ];
     }
 
-    public function registerContainerConfiguration(LoaderInterface $loader)
+    protected function configureContainer(ContainerBuilder $c, LoaderInterface $loader)
+    {
+        $c->loadFromExtension('framework', array(
+            'secret' => 'S0ME_SECRET'
+        ));
+    }
+
+    protected function configureRoutes(RouteCollectionBuilder $routes)
     {
     }
 }
