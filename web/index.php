@@ -1,6 +1,6 @@
 <?php
 
-namespace MiniSymfony\web;
+namespace MiniSymfony2\web;
 
 require_once __DIR__ . '/../vendor/autoload.php';
 
