@@ -1,5 +1,7 @@
 <?php
 
+namespace MiniSymfony;
+
 use Symfony\Component\Config\Loader\LoaderInterface;
 use Symfony\Component\HttpKernel\Kernel;
 use Symfony\Component\HttpKernel\HttpKernel;
@@ -11,10 +13,7 @@ class AppKernel extends Kernel
 {
     public function registerBundles()
     {
-        $bundles = [
-        ];
-
-        return $bundles;
+        return [];
     }
 
     public function registerContainerConfiguration(LoaderInterface $loader)

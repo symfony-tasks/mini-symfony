@@ -1,6 +1,7 @@
 <?php
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Debug\Debug;
+use MiniSymfony\AppKernel;
 
 require_once __DIR__ . '/../vendor/autoload.php';
 
