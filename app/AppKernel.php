@@ -2,33 +2,36 @@
 
 namespace MiniSymfony;
 
+use Symfony\Bundle\FrameworkBundle\FrameworkBundle;
+use Symfony\Bundle\FrameworkBundle\Kernel\MicroKernelTrait;
 use Symfony\Component\Config\Loader\LoaderInterface;
+use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\HttpKernel\Kernel;
 use Symfony\Component\HttpKernel\HttpKernel;
 use Symfony\Component\DependencyInjection\Reference;
 use Symfony\Component\HttpKernel\Controller\ControllerResolver;
 use Symfony\Component\EventDispatcher\EventDispatcher;
+use Symfony\Component\Routing\RouteCollectionBuilder;
 
 class AppKernel extends Kernel
 {
+    use MicroKernelTrait;
+
     public function registerBundles()
     {
-        return [];
+        return [
+            new FrameworkBundle(),
+        ];
     }
 
-    public function registerContainerConfiguration(LoaderInterface $loader)
+    protected function configureRoutes(RouteCollectionBuilder $routes)
     {
     }
 
-    protected function prepareContainer(\Symfony\Component\DependencyInjection\ContainerBuilder $container)
+    protected function configureContainer(ContainerBuilder $c, LoaderInterface $loader)
     {
-        parent::prepareContainer($container);
-
-        $container->register('event_dispatcher', EventDispatcher::class);
-        $container->register('controller_resolver', ControllerResolver::class);
-        $container->register('http_kernel', HttpKernel::class)->setArguments([
-            new Reference('event_dispatcher'),
-            new Reference('controller_resolver'),
+        $c->loadFromExtension('framework', [
+            'secret' => 'ololo',
         ]);
     }
 }
