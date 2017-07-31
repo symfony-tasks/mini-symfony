@@ -2,9 +2,7 @@
     "require": {
         "symfony/http-kernel": "^3.3",
         "symfony/config": "^3.3",
-        "symfony/dependency-injection": "^3.2",
-        "symfony/proxy-manager-bridge": "^3.3",
-        "symfony/class-loader": "^3.3"
+        "symfony/dependency-injection": "^3.2"
     },
     "autoload": {
         "classmap": [
