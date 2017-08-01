@@ -1,0 +1,13 @@
+{
+    "require": {
+        "symfony/http-kernel": "^3.3",
+        "symfony/config": "^3.3",
+        "symfony/dependency-injection": "^3.2",
+        "symfony/framework-bundle": "^3.3",
+        "symfony/console": "^3.3",
+        "symfony/web-server-bundle": "^3.3"
+    },
+    "autoload": {
+        "psr-4": {"MiniSymfony\\": "app/"}
+    }
+}
