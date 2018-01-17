@@ -4,9 +4,13 @@ use Symfony\Component\Config\Loader\LoaderInterface;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\HttpKernel\Bundle\BundleInterface;
 use Symfony\Component\HttpKernel\Kernel;
+use Symfony\Bundle\FrameworkBundle\Kernel\MicroKernelTrait;
+use Symfony\Component\Routing\RouteCollectionBuilder;
 
 class AppKernel extends Kernel
 {
+    use MicroKernelTrait;
+
     /**
      * Returns an array of bundles to register.
      *
@@ -19,19 +23,12 @@ class AppKernel extends Kernel
         ];
     }
 
-    /**
-     * Loads the container configuration.
-     *
-     * @param LoaderInterface $loader A LoaderInterface instance
-     */
-    public function registerContainerConfiguration(LoaderInterface $loader)
+    protected function configureRoutes(RouteCollectionBuilder $routes)
     {
     }
 
-    protected function prepareContainer(ContainerBuilder $container)
+    protected function configureContainer(ContainerBuilder $container, LoaderInterface $loader)
     {
         $container->setParameter('kernel.secret', 'secret');
-        parent::prepareContainer($container);
     }
-
 }
