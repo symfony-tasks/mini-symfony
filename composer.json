@@ -1,0 +1,11 @@
+{
+  "autoload": {
+    "classmap": [
+      "AppKernel.php"
+    ]
+  },
+  "require": {
+    "symfony/framework-bundle": "~4.0",
+    "symfony/web-server-bundle": "~4.0"
+  }
+}
