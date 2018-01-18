@@ -74,7 +74,7 @@ php -S 0.0.0.0:8000 path/to/router.php
 Все, что в задании `404 на коленке`, с двумя изменениями
 
  1. Файлов 4 - добавляется файл консоли 
- 2. Запуск веб-сервера должен произойти с помощи команды `php path_console/to/console.php 0.0.0.0:8000 --webroot=path/to/ --router=path/to/router.php`
+ 2. Запуск веб-сервера должен произойти с помощи команды `php path_console/to/console.php 0.0.0.0:8000 --docroot=path/to/ --router=path/to/router.php`
 
 ## Материалы
 
@@ -82,6 +82,7 @@ php -S 0.0.0.0:8000 path/to/router.php
 * [Список пакетов symfony](https://packagist.org/packages/symfony/)
 * [Настройка ядра](http://symfony.com/doc/current/reference/configuration/kernel.html)
 * [FrameworkBundle](https://github.com/symfony/framework-bundle)
+* [WebServerBundle](https://github.com/symfony/web-server-bundle)
 
 ## Статьи из серии "Создание фреймворка на компонентах Symfony"
 
